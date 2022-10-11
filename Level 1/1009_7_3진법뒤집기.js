@@ -6,5 +6,8 @@
 
 function solution(n) {
   let three = n.toString(3).split("").reverse().join("");
-  return Number.parseInt(three, 3);
+  return parseInt(three, 3);
 }
+
+// parseInt 자체가 number로 변환해줌
+// 따라서 Number를 씌워줄 필요가 없음

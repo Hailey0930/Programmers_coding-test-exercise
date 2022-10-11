@@ -26,16 +26,8 @@ function solution(n, arr1, arr2) {
   let answer = [];
 
   for (i = 0; i < arr1.length; i++) {
-    if (arr1[i].toString(2).length < n) {
-      map1.push(arr1[i].toString(2).padStart(n, "0"));
-    } else {
-      map1.push(arr1[i].toString(2));
-    }
-    if (arr2[i].toString(2).length < n) {
-      map2.push(arr2[i].toString(2).padStart(n, "0"));
-    } else {
-      map2.push(arr2[i].toString(2));
-    }
+    map1.push(arr1[i].toString(2).padStart(n, "0"));
+    map2.push(arr2[i].toString(2).padStart(n, "0"));
   }
 
   for (j = 0; j < map1.length; j++) {

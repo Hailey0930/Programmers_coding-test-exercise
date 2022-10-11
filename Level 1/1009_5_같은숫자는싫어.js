@@ -19,6 +19,15 @@ function solution(arr) {
   return answer;
 }
 
+// i+1의 경우 마지막값 다음값을 인식하여 undefined가 뜸 따라서 i-1로 수정하여 마지막 값을 i로 맞춰줌
+function solution(arr) {
+  let answer = [];
+  for (i = 1; i < arr.length; i++) {
+    if (arr[i - 1] !== arr[i]) answer.push(arr[i]);
+  }
+  return answer;
+}
+
 function solution(arr) {
   return arr.filter((el, index) => el !== arr[index + 1]);
 }
