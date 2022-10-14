@@ -47,3 +47,5 @@ function solution(s) {
 
   return (answer = Number(result));
 }
+
+// object method 확인해보기
