@@ -11,3 +11,21 @@
 // 제한사항
 // 1 ≤ ingredient의 길이 ≤ 1,000,000
 // ingredient의 원소는 1, 2, 3 중 하나의 값이며, 순서대로 빵, 야채, 고기를 의미합니다.
+
+function solution(ingredient) {
+  let stk = [];
+  let count = 0;
+  for (let i = 0; i < ingredient.length; i++) {
+    stk.push(ingredient[i]);
+    if (
+      stk[stk.length - 1] === 1 &&
+      stk[stk.length - 2] === 3 &&
+      stk[stk.length - 3] === 2 &&
+      stk[stk.length - 4] === 1
+    ) {
+      count++;
+      stk.splice(-4);
+    }
+  }
+  return count;
+}
